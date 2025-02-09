@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Playlist Generator</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Music Playlist Generator</h1>
+      <p>Create and manage your music playlists with ease.</p>
+    </header>
+
+    <!-- Trending Songs Section -->
+    <section id="trending-songs" class="card">
+      <h2>Trending Songs</h2>
+      <ul id="trending-list"></ul>
+    </section>
+
+    <!-- Save Playlist Form -->
+    <section id="save-playlist" class="card">
+      <h2>Save Playlist</h2>
+      <form id="playlist-form">
+        <input type="text" id="playlist-name" placeholder="Enter playlist name" required>
+        <button type="submit">Save Playlist</button>
+      </form>
+    </section>
+
+    <!-- Saved Playlists Section -->
+    <section id="saved-playlists" class="card">
+      <h2>Saved Playlists</h2>
+      <ul id="playlist-list"></ul>
+    </section>
+  </div>
+
+  <script src="static/script.js"></script>
+</body>
+</html>
