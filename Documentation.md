@@ -66,13 +66,13 @@ REDIRECT_URL=http://localhost:3090
 
 ---
 
-7. Error Handling
+## 7. Error Handling
 Invalid Request: Returns a 400 Bad Request with an error message.
 API Errors: Returns 500 Internal Server Error for third-party failures.
 
 ---
 
-8. Future Improvements
+## 8. Future Improvements
 Add user authentication.
 Implement persistent storage (e.g., PostgreSQL).
 Allow users to share playlists.
