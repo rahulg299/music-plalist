@@ -1,42 +1,49 @@
 # Music Playlist Generator
 
-A web application that allows users to generate and manage music playlists using trending songs from Spotify.
+The **Music Playlist Generator** is a web application that allows users to create, save, and view music playlists. It also provides trending songs fetched from Spotify and lyrics for individual songs.
 
 ## Features
-- Fetches trending songs from Spotify
-- Create and save custom playlists
-- View saved playlists
-- Fetch song lyrics (via external API)
-- Simple UI for managing playlists
+- Fetch trending songs from Spotify.
+- Save and manage custom playlists.
+- Fetch song lyrics using the [Lyrics.ovh API](https://lyrics.ovh/).
+- Modern UI with a responsive design.
+
+## Technologies Used
+- **Backend**: Golang, Gorilla Mux, Spotify API
+- **Frontend**: HTML, CSS, JavaScript
+- **Middleware**: Custom Logging and Content-Type Middleware
+- **Database**: In-memory data storage (can be replaced with a DB)
+- **APIs**:
+  - Spotify API for trending songs.
+  - Lyrics.ovh API for fetching lyrics.
 
 ## Installation
 
-1. **Clone the repository**  
-   ```sh
-   git clone https://github.com/yourusername/music-playlist-generator.git
-   cd music-playlist-generator
-Set up environment variables
-Create a .env file and add your credentials:
+### Prerequisites
+- Golang installed (v1.23.5 or later)
+- Spotify Developer Account for API credentials
+- `.env` file with the following variables:
+  ```plaintext
+  SPOTIFY_CLIENT_ID=<your_client_id>
+  SPOTIFY_CLIENT_SECRET=<your_client_secret>
+  REDIRECT_URL=http://localhost:3090
+Steps
+Clone the repository:
 
-SPOTIFY_CLIENT_ID=your-client-id
-SPOTIFY_CLIENT_SECRET=your-client-secret
-REDIRECT_URL=http://localhost:3090
+bash
+git clone https://github.com/your-username/music-playlist-generator.git
+cd music-playlist-generator
+Install dependencies:
 
-Install dependencies
+bash
 go mod tidy
+Run the application:
 
-Run the server
+bash
 go run main.go
-
-Access the web app
-Open http://localhost:3090 in your browser.
+Open your browser and visit http://localhost:3090.
 
 API Endpoints
-GET /api/playlists - Get saved playlists
-GET /api/trending - Fetch trending songs
-POST /api/save - Save a playlist
-Technologies Used
-Go (Gorilla Mux for routing)
-Spotify API (for fetching trending songs)
-JavaScript, HTML, CSS (Frontend)
-Lyrics API (for song lyrics)
+GET /api/trending: Fetches trending songs from Spotify.
+GET /api/playlists: Retrieves saved playlists.
+POST /api/save: Saves a new playlist (requires JSON body).
